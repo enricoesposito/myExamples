@@ -11,19 +11,18 @@
     <script src="app.js"></script>
   </head>
 <body>
-   <div class="container" ng-controller="checkCtrl">
+   <div class="container" ng-controller="LunchCheckController">
      <h1>Lunch Checker</h1>
-         {{msgKO}}
          <div class="form-group">
              <input id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control" ng-value="value"/>
+             class="form-control" ng-model="value"/>
          </div>
          <div class="form-group">
-             <button class="btn btn-default" ng-click="checkCtrl()">Check If Too Much</button>
+             <button class="btn btn-default" ng-click="doCheck()">Check If Too Much</button>
          </div>
          <div class="form-group message">
-           {{msgOk}}
+           {{msg}}
          </div>
    </div>
 
